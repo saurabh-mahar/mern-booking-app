@@ -28,3 +28,13 @@ test("should show hotel search results", async ({ page }) => {
   await expect(page.getByText("new hotel")).toBeVisible();
 });
 
+test("should show hotel detail", async ({ page }) => {
+  await page.goto(UI_URL);
+
+  await page.getByPlaceholder("Where are you going?").fill("haldwani");
+  await page.getByRole("button", { name: "Search" }).click();
+
+  await page.getByText("new hotel").click();
+  await expect(page).toHaveURL(/detail/);
+  await expect(page.getByRole("button", { name: "Book now" })).toBeVisible();
+});
