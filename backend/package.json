@@ -25,7 +25,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.17.0",
     "mongoose": "^8.16.4",
-    "multer": "^2.0.2"
+    "multer": "^2.0.2",
+    "stripe": "^18.3.0"
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.9",
